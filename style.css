@@ -108,13 +108,15 @@ footer {
     
 }
 #percentage{
-    /* position: absolute; */
+    position: absolute;
     /* background: none; */
     display: flex;
-    flex: auto;
-    justify-content: center;
+    
+    right: 45%;
+    
+    
     height: 1.5em;
-    vertical-align: middle;
+align-items: center;
     
 }
 

@@ -132,6 +132,7 @@ const submitingAnsw = function(){
             percOfCorrAnsw.innerHTML=`${score/allBtns.length*100}%`;
 
             loadBar.style.width= `${score/allBtns.length*100}%`;
+            console.log(loadBar.style.width);
 
 
             
