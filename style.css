@@ -93,6 +93,7 @@ footer {
 }
 
 #loadingbox {
+    display: flex;
     width: 10em;
     background: rgb(131, 131, 131);
     position: relative;
@@ -100,7 +101,7 @@ footer {
 }
 
 #loadbar{
-    width: 5%;
+    width: 0%;
     background:rgb(16, 197, 62);
     height: 100%;
     margin: 0;
@@ -110,7 +111,7 @@ footer {
 #percentage{
     position: absolute;
     /* background: none; */
-    display: flex;
+    display: inherit;
     
     right: 45%;
     
