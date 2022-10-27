@@ -110,9 +110,7 @@ footer {
 }
 #percentage{
     position: absolute;
-    /* background: none; */
     display: inherit;
-    
     right: 45%;
     
     
