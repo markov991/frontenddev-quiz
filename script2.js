@@ -10,6 +10,7 @@ const posibleAnswers= document.querySelector('.input_value')
 const btnSubmit = document.getElementById('btnSubmit')
 const percOfCorrAnsw = document.getElementById('percentage');
 const loadBar= document.getElementById('loadbar');
+const resetBtn = document.getElementById('reset')
 
 const globalHtmlQuestions= [];
 const globalCssQuestions= [];
@@ -20,7 +21,7 @@ let butnClicked;
 
 
 
-let caunt=0;
+
 let score=0;
 
 
@@ -119,7 +120,8 @@ const submitingAnsw = function(){
                 score++
                 butnClicked.classList.add("correctAnswer")
                }else {
-                butnClicked.style.background='red'
+                butnClicked.classList.add("incorectAnswer")
+                // butnClicked.style.background='red'
                }
             }
 
@@ -151,9 +153,23 @@ const renderquestion= function(){
     
 }
 
+const resetQuiz = function() {
+    resetBtn.addEventListener('click', function(){
+    for(let i =0; i<allBtns.length; i++){
+       allBtns[i].disabled = false;
+       allBtns[i].classList.add("defaultBtn");
+       loadBar.style.width='0%'
+       percOfCorrAnsw.innerHTML='0%'
+    }
+
+    score=0;
+})}
+
+// resetBtn.addEventListener('click', console.log('hello'))
+
 openModal()
 submitingAnsw()
-
+resetQuiz()
 
 const htmlQuestion1= new Questions('HTML', 
     'What does HTML stands for?', 

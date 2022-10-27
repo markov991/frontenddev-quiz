@@ -180,9 +180,18 @@ align-items: center;
     display: none;
 }
 
+.incorectAnswer{
+    background-color: #c31432 !important;
+    color:#fff !important;
+}
 .correctAnswer {
    
   background-color: rgb(9, 212, 60) !important;
   color: rgb(238, 238, 238) !important;
   
+}
+
+.defaultBtn {
+    background-color: #fff !important;
+    color: #444 !important;
 }
