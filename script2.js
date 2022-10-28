@@ -118,13 +118,19 @@ const submitingAnsw = function(){
             for(let i =0 ;  i < posibleAnswers.getElementsByTagName('input').length; i++){
                if (posibleAnswers.getElementsByTagName('input')[i].checked && i=== selectedQuestion.corAnsw){ 
                 score++
-                butnClicked.classList.add("correctAnswer")
+                butnClicked.style.background='#10c53e'
+                console.log('it is correct');
+                // butnClicked.classList.add("correctAnswer")
+                break
                }else {
-                butnClicked.classList.add("incorectAnswer")
-                // butnClicked.style.background='red'
+                // butnClicked.classList.add("incorectAnswer")
+                console.log('it is not correct',);
+                butnClicked.style.background='red'
+                
                }
             }
 
+            butnClicked.style.color='white'
             console.log(score);
 
             modal.classList.add('hidden')
@@ -157,7 +163,8 @@ const resetQuiz = function() {
     resetBtn.addEventListener('click', function(){
     for(let i =0; i<allBtns.length; i++){
        allBtns[i].disabled = false;
-       allBtns[i].classList.add("defaultBtn");
+       allBtns[i].style.background='#fff';
+       allBtns[i].style.color='#444';
        loadBar.style.width='0%'
        percOfCorrAnsw.innerHTML='0%'
     }
