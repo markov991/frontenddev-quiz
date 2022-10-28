@@ -118,20 +118,18 @@ const submitingAnsw = function(){
             for(let i =0 ;  i < posibleAnswers.getElementsByTagName('input').length; i++){
                if (posibleAnswers.getElementsByTagName('input')[i].checked && i=== selectedQuestion.corAnsw){ 
                 score++
-                butnClicked.style.background='#10c53e'
-                console.log('it is correct');
-                // butnClicked.classList.add("correctAnswer")
-                break
-               }else {
-                // butnClicked.classList.add("incorectAnswer")
-                console.log('it is not correct',);
-                butnClicked.style.background='red'
+                
+                butnClicked.classList.remove('defaultBtn')
+                butnClicked.classList.add("correctAnswer")
+                
+               }if(posibleAnswers.getElementsByTagName('input')[i].checked && i!== selectedQuestion.corAnsw) {
+                butnClicked.classList.remove('defaultBtn')
+                butnClicked.classList.add("incorectAnswer")
+                
                 
                }
             }
 
-            butnClicked.style.color='white'
-            console.log(score);
 
             modal.classList.add('hidden')
             butnClicked.disabled = true
@@ -140,7 +138,7 @@ const submitingAnsw = function(){
             percOfCorrAnsw.innerHTML=`${score/allBtns.length*100}%`;
 
             loadBar.style.width= `${score/allBtns.length*100}%`;
-            console.log(loadBar.style.width);
+            
 
 
             
@@ -150,12 +148,16 @@ const submitingAnsw = function(){
 
 
 const renderquestion= function(){
+
+
+   
     posibleAnswers.insertAdjacentHTML( 'afterbegin' ,`
                     <input type="radio" name="answers" value="1">${selectedQuestion.answ[0]}<br>
                     <input type="radio" name="answers" value="2">${selectedQuestion.answ[1]}<br>
                     <input type="radio" name="answers" value="3">${selectedQuestion.answ[2]}<br>
                     <input type="radio" name="answers" value="4">${selectedQuestion.answ[3]}<br>
                 `) 
+                
     
 }
 
@@ -163,8 +165,9 @@ const resetQuiz = function() {
     resetBtn.addEventListener('click', function(){
     for(let i =0; i<allBtns.length; i++){
        allBtns[i].disabled = false;
-       allBtns[i].style.background='#fff';
-       allBtns[i].style.color='#444';
+       allBtns[i].classList.remove('correctAnswer')
+       allBtns[i].classList.remove('incorectAnswer')
+       allBtns[i].classList.add('defaultBtn')
        loadBar.style.width='0%'
        percOfCorrAnsw.innerHTML='0%'
     }
