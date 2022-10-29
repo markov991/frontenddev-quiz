@@ -13,7 +13,7 @@ footer {
     width: 100%;
     background-color: black;
     text-align: center;
-    padding: 1git %;
+    padding: 1%;
     position: fixed;
 }
 
@@ -36,7 +36,7 @@ footer {
 }
 
 .questions{
-    width: 85%;
+    width: 65%;
     padding: 50px;
     margin: auto;
     display: flex;
@@ -66,6 +66,7 @@ footer {
     margin: 0px;
     text-align: center;
 }
+
 #reset{
     
     color: red;
@@ -73,13 +74,16 @@ footer {
     border: none;   
     font-weight: bold;
     cursor: pointer;
-
-    
    
-    
-    
+        
 }
-#ime-takmicara{
+
+#reset:hover{
+    background-color: #c31432;
+    color: #fff;
+    border-radius: 5px;
+}
+#contestorName{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     text-align: right;

@@ -11,6 +11,7 @@ const btnSubmit = document.getElementById('btnSubmit')
 const percOfCorrAnsw = document.getElementById('percentage');
 const loadBar= document.getElementById('loadbar');
 const resetBtn = document.getElementById('reset')
+const contestorName = document.getElementById('contestorName')
 
 const globalHtmlQuestions= [];
 const globalCssQuestions= [];
@@ -117,6 +118,7 @@ const submitingAnsw = function(){
 
             for(let i =0 ;  i < posibleAnswers.getElementsByTagName('input').length; i++){
                if (posibleAnswers.getElementsByTagName('input')[i].checked && i=== selectedQuestion.corAnsw){ 
+               
                 score++
                 
                 butnClicked.classList.remove('defaultBtn')
@@ -135,12 +137,10 @@ const submitingAnsw = function(){
             butnClicked.disabled = true
             posibleAnswers.innerHTML=``
 
-            percOfCorrAnsw.innerHTML=`${score/allBtns.length*100}%`;
+            percOfCorrAnsw.innerHTML=`${Math.trunc(score/allBtns.length*100)}%`;
 
             loadBar.style.width= `${score/allBtns.length*100}%`;
-            
-
-
+          
             
         }
       });
@@ -174,8 +174,18 @@ const resetQuiz = function() {
 
     score=0;
 })}
+// prompt("Hello")
 
-// resetBtn.addEventListener('click', console.log('hello'))
+
+
+const gettingName=function (){
+    let name = prompt('What is your name?')
+    contestorName.innerHTML =name
+
+    console.log(name);
+} 
+
+gettingName()
 
 openModal()
 submitingAnsw()
