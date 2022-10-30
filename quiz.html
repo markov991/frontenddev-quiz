@@ -1,102 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DevQuiz</title>
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>DevQuiz</title>
-  <link rel="stylesheet" href="style.css">
-   
-  <script defer src="script2.js"></script> 
+    <script defer src="script2.js"></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div>
-        <header class="header" >
-            <button id = 'reset'>Play again</button>
-            <div id ='contestorName'></div>
-        </header>
+      <header class="header">
+        <button id="reset">Play again</button>
+        <div id="contestorName"></div>
+      </header>
     </div>
     <div class="container">
-    <div >
-        <h1 id = 'site-name'>FRONTEND DEVELOPER QUIZ</h1>
-        <div id ='loading'>
-            <div id = 'loadingbox'>
-                <div id = 'loadbar'> </div>
-                <span id = 'percentage'>%</span>
-                <!-- <div ></div> -->
-                
-            
-            </div>
+      <div>
+        <h1 id="site-name">FRONTEND DEVELOPER QUIZ</h1>
+        <div id="loading">
+          <div id="loadingbox">
+            <div id="loadbar"></div>
+            <span id="percentage">%</span>
+            <!-- <div ></div> -->
+          </div>
         </div>
-    </div>
-    <div class="questions">
-        <div id="q_html" >
-            <H2>HTML</H2>
-            <button>Question 1</button>
-            <button>Question 2</button>
-            <button>Question 3</button>
-            <button>Question 4</button>
-            <button>Question 5</button>
+      </div>
+      <div class="questions">
+        <div id="q_html">
+          <h2>HTML</h2>
+          <button>Question 1</button>
+          <button>Question 2</button>
+          <button>Question 3</button>
+          <button>Question 4</button>
+          <button>Question 5</button>
         </div>
-        <div id="q_css" >
-            <H2>CSS</H2>
-            <button>Question 1</button>
-            <button>Question 2</button>
-            <button>Question 3</button>
-            <button>Question 4</button>
-            <button>Question 5</button>
+        <div id="q_css">
+          <h2>CSS</h2>
+          <button>Question 1</button>
+          <button>Question 2</button>
+          <button>Question 3</button>
+          <button>Question 4</button>
+          <button>Question 5</button>
         </div>
         <div id="q_js">
+          <div>
+            <h2>JS</h2>
+
             <div>
-                <H2>JS</H2>
-
-                <div>
-                    <button>Question 1</button>
-                    <button>Question 2</button>
-                    <button>Question 3</button>
-                    <button>Question 4</button>
-                    <button>Question 5</button>
-                </div>
-                <div>
-                    <button>Question 6</button>
-                    <button>Question 7</button>
-                    <button>Question 8</button>
-                    <button>Question 9</button>
-                    <button>Question 10</button>
-                </div>
+              <button>Question 1</button>
+              <button>Question 2</button>
+              <button>Question 3</button>
+              <button>Question 4</button>
+              <button>Question 5</button>
             </div>
+            <div>
+              <button>Question 6</button>
+              <button>Question 7</button>
+              <button>Question 8</button>
+              <button>Question 9</button>
+              <button>Question 10</button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
     <div id="question_pop" class="hidden">
-        <H3>Pitanje br</H3>
-        <p id="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Quis consectetur eius, velit ratione voluptas enim totam
-             aut est nemo quaerat mollitia animi, quasi omnis maxime,
-              natus temporibus? Minus, saepe voluptatibus.</p>
-        <div class="input_value">
-
-            <!--
+      <h3>Pitanje br</h3>
+      <p id="question">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+        consectetur eius, velit ratione voluptas enim totam aut est nemo quaerat
+        mollitia animi, quasi omnis maxime, natus temporibus? Minus, saepe
+        voluptatibus.
+      </p>
+      <div class="input_value">
+        <!--
             <input type="radio" name="answers" value="1">PA<br>
             <input type="radio" name="answers" value="2">PA<br>
             <input type="radio" name="answers" value="3">PA<br>
             <input type="radio" name="answers" value="4">PA<br>-->
-            
-        </div>
+      </div>
 
-        <div id="btnSubmit">
-            <button>Submit</button>
-        </div>
-        
+      <div id="btnSubmit">
+        <button>Submit</button>
+      </div>
     </div>
-    <div id= 'footer'>
-        <footer>&copyMarkDev2022.com</footer>
+    <div id="footer">
+      <footer>&copyMarkDev2022.com</footer>
     </div>
-         
-</body>
-
-
+  </body>
 </html>
