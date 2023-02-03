@@ -261,7 +261,7 @@ const cssQuestion5 = new Questions(
 const jsQuestion1 = new Questions(
   "Js",
   "Inside which HTML element do we put the JavaScript?",
-  ["<script>", "<scripting>", "<javascript>", "js"],
+  ["&ltscript&gt", "&ltscripting&gt", "&ltjavascript&gt", "js"],
   0
 );
 
